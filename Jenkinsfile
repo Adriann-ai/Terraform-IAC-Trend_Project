@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage("Git Checkout") {
+            steps {
+                git branch: 'main', url: 'https://github.com/Adriann-ai/Terraform-IAC-Trend_Project.git'
+            }
+        }
+
         stage("Initialize") {
             steps {
                 sh """
